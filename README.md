@@ -10,8 +10,6 @@ It simulates a real-world e-commerce login system without building a backend by 
 - **Routing:** React Router DOM
 - **Token Storage:** LocalStorage
 
----
-
 ## Features
 
 1. **Login Functionality**
@@ -36,8 +34,6 @@ It simulates a real-world e-commerce login system without building a backend by 
    - Invalid credentials display an error message.
    - Expired tokens redirect to login.
 
----
-
 ## Demo API
 
 The project uses the **Platzi Fake Store API** for login:
@@ -47,8 +43,6 @@ The project uses the **Platzi Fake Store API** for login:
   - Email: `john@mail.com`
   - Password: `changeme`
 - Returns a **real signed JWT** (`access_token`) used in the frontend.
-
----
 
 ## Installation
 
