@@ -1,16 +1,57 @@
-# React + Vite
+# Frontend JWT Authentication Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project demonstrates **user authentication using JSON Web Tokens (JWT)** entirely on the **frontend**.  
+It simulates a real-world e-commerce login system without building a backend by leveraging a **demo JWT API**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend Framework:** React
+- **HTTP Client:** Axios
+- **Routing:** React Router DOM
+- **Token Storage:** LocalStorage
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+1. **Login Functionality**
+   - Users can log in using a real demo JWT API.
+   - Email and password are validated by the API.
+   - On successful login, the server returns a **signed JWT**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **JWT Storage & Handling**
+   - JWT is securely stored in **localStorage**.
+   - Token expiration is checked before rendering protected pages.
+   - Token is used in API headers for protected routes.
+
+3. **Protected Dashboard**
+   - Displays **user details** decoded from JWT.
+   - Only accessible if a valid token exists.
+
+4. **Logout**
+   - Removes token from localStorage.
+   - Redirects users to the login page.
+
+5. **Error Handling**
+   - Invalid credentials display an error message.
+   - Expired tokens redirect to login.
+
+---
+
+## Demo API
+
+The project uses the **Platzi Fake Store API** for login:
+- https://api.escuelajs.co/api/v1/auth/login
+
+- **Demo Credentials:**
+  - Email: `john@mail.com`
+  - Password: `changeme`
+- Returns a **real signed JWT** (`access_token`) used in the frontend.
+
+---
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
