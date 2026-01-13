@@ -10,6 +10,9 @@ It simulates a real-world e-commerce login system without building a backend by 
 - **Routing:** React Router DOM
 - **Token Storage:** LocalStorage
 
+## Live Demo
+Check it out here: [🌐 Live Project](https://jwt-demo.netlify.app)
+
 ## Features
 
 1. **Login Functionality**
